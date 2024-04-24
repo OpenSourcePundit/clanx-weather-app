@@ -1,0 +1,38 @@
+.bg-main{
+    background-color: #D6D7DA;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+}
+.wrapper-main{
+    /* width: 90vw; */
+    height: 90vh;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    border-radius: 50px;
+   
+    
+}
+.section-lh-main{
+background-color:#FFFFFE ;
+display: flex;
+height: 100%;
+width: 30%;
+border-radius: 50px 0px 0px 50px ;
+justify-content: center;
+padding: 20px;
+}
+.section-rh-main{
+background-color: #F6F6F8;
+display: flex;
+flex-direction:column;
+padding: 20px;
+height: 100%;
+width: 70%;
+border-radius: 0px 50px 50px 0px ;
+
+}

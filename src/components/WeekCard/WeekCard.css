@@ -1,0 +1,51 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  
+  .card {
+    
+    background-color: white;
+    border-radius: 15px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 2px;
+    width: 100px;
+  }
+  
+  .section {
+    margin-bottom: 15px;
+  }
+  
+  .weekday {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 2px;
+  }
+  
+  .temperatures {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .max-temp {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .min-temp {
+    font-size: 15px;
+    color: #666;
+  }
+  
