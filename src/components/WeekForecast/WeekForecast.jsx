@@ -16,7 +16,7 @@ const WeekForecast = () => {
     <div className="week-forecast">
       {daily?.map((day, index) =>
         index !== 0 ? (
-          <WeekCard
+          <WeekCard key={index}
             weekday={getWeekDay(day.dt)}
             iconSrc={getIcon(day.weather[0].icon)}
             maxTemp={day.temp.max}
@@ -29,7 +29,7 @@ const WeekForecast = () => {
     </div>
     <h6>Today's Highlights</h6>
     <div className="highlights-section">
-      {HighlightsCardHead.map((head)=><HighlightsCard head={head} current={current} />)}
+      {HighlightsCardHead.map((head)=><HighlightsCard key={head} head={head} current={current} />)}
     
     </div>
     

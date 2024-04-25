@@ -14,12 +14,12 @@ const Sidebar = () => {
           <img src={`${getIcon(current?.weather[0]?.icon)}`} alt="temp" className="temp-picture" />
         </div>
         <div className='sidebar-temp'>
-          {Math.trunc(current?.temp)}<span class="degree">&deg;{unit==="metric"?'C':'F'}</span>  </div>
+          {Math.trunc(current?.temp)}<span className="degree">&deg;{unit==="metric"?'C':'F'}</span>  </div>
         <div className='sidebar-day'>{getWeekDayFull(current?.dt)} , {getSunTime(current.dt)}</div>
       </div>
       <div className='sidebar-down'>
         <div className='sidebar-text'>
-          {current.weather.map((weather)=><div className='sidebar-weather-up'>{weather?.description}</div>)}
+          {current.weather.map((weather,index)=><div key={index} className='sidebar-weather-up'>{weather?.description}</div>)}
         </div>
         <div className='sidebar-city-img'>
           <img src={`${locationimage}`} alt="City" className="city-picture" />
