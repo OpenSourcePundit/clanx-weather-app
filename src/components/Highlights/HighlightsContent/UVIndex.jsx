@@ -1,25 +1,29 @@
 import React from 'react'
-import "./UVI.css"
-import VerticalProgressBar from './VerticalProgressBar';
+import "./HighlightsContent.css"
+import ProgressBar from 'react-customizable-progressbar'
+
+
 
 const UVIndex = ({current}) => {
-    const {uvi} =current;
-
-    
-
-
-
-
-
-
+    const {uvi} = current;
 
     return (
-      <div className="content">
-          {/* <div role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style={{ '--value': 33 }}>
-      <div className="progress"></div>
-    </div> */}
-
-{/* <VerticalProgressBar progress={70} /> */}
+      <div className="uv">
+    <ProgressBar
+    radius={70}
+    progress={uvi}
+    steps={15}
+    cut={180}
+    rotate={180}
+    strokeWidth={28}
+    strokeColor="#ffce54"
+    strokeLinecap="butt"
+    trackStrokeWidth={10}
+    trackStrokeLinecap="butt"
+/>
+<div className="uv-index">
+  {uvi}
+</div>
 
       </div>)
 }
