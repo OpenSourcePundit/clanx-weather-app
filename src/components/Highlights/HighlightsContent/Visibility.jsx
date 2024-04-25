@@ -1,8 +1,19 @@
 import React from 'react'
 
-const Visibility = () => {
+const Visibility = ({current}) => {
+    const {visibility} = current
   return (
-    <div>Visibility</div>
+    <div className="content">
+        <div className="highlight-main">
+            
+            {visibility/1000}Km
+
+        </div>
+        <div className="highlight-footer">
+            Average
+        </div>
+
+    </div>
   )
 }
 

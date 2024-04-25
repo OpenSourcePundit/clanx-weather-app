@@ -34,3 +34,16 @@ export const degToDirection = (num) => {
     const arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     return arr[(val % 16)];
   };
+
+export const getSunTime = (dt) =>{
+    const milliseconds = dt * 1000; 
+    const dateObject = new Date(milliseconds);
+    let hours = dateObject.getHours();
+    const minutes = dateObject.getMinutes();
+    const amOrPm = hours >= 12 ? 'PM' : 'AM';
+    hours %= 12;
+    hours = hours || 12;
+    const timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${amOrPm}`;
+
+    return timeString;
+}
