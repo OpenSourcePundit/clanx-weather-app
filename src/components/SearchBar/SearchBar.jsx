@@ -21,7 +21,7 @@ const SearchBar = () => {
           `http://api.openweathermap.org/geo/1.0/direct?q=${term}&limit=5&appid=b08bf90d3dc2d9c6358ce2636fd00398`
         );
         const data = await response.json();
-        console.log("search:",data)
+      
         setSearchResults(data);
       } catch (error) {
         console.error('Error fetching search results:', error);

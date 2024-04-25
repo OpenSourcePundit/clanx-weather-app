@@ -27,7 +27,7 @@ const WeekForecast = () => {
         )
       )}
     </div>
-    <h3>Today's Highlights</h3>
+    <h6>Today's Highlights</h6>
     <div className="highlights-section">
       {HighlightsCardHead.map((head)=><HighlightsCard head={head} current={current} />)}
     

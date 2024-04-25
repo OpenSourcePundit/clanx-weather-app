@@ -19,8 +19,7 @@ const Sidebar = () => {
       </div>
       <div className='sidebar-down'>
         <div className='sidebar-text'>
-          <div className='sidebar-weather-up'>{current?.weather[0]?.description}</div>
-          <div className='sidebar-weather-down'>Rain </div>
+          {current.weather.map((weather)=><div className='sidebar-weather-up'>{weather?.description}</div>)}
         </div>
         <div className='sidebar-city-img'>
           <img src={`${locationimage}`} alt="City" className="city-picture" />

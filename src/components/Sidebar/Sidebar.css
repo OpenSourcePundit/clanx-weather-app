@@ -9,7 +9,7 @@
 
 .sidebar-up, .sidebar-down{
   display: block;
-  margin: 0.5rem auto;
+  /* margin: 0.5rem auto; */
   width: 100%;
   text-align: left;
   padding: 0.5rem;
@@ -37,19 +37,23 @@
 
 .sidebar-down{
   border-top: 0.5px solid var(--font);
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.city-picture{
+  border-radius: 10px;
+  width: 100%;
+  max-width: 240px;
+  height: 8rem;
 }
 .degree {
   position: relative;
   top: -2rem;
   font-size: 2rem;
 }
-.city-picture{
-  width: 17rem;
-  height: 5rem;
-  border-radius: 15px;
-  margin: 0.5rem;
-}
+
 .sidebar-city-img {
   position: relative; 
 }

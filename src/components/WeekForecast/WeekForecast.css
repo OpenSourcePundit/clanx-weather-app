@@ -9,7 +9,7 @@
 
 .highlights-section{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
     padding: 10px;
     height: 17rem;

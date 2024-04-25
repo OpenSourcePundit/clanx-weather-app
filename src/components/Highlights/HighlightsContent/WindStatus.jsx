@@ -1,13 +1,15 @@
+import React, { useContext } from 'react'
+import { convertSpeed, degToDirection } from '../../../utils/getWeekDay'
+import { DataContext } from '../../../Context/dataContext'
 
-import React from 'react'
-import { degToDirection } from '../../../utils/getWeekDay'
 
 const WindStatus = ({current}) => {
     const {wind_speed,wind_deg} = current
+    const {unit} = useContext(DataContext)
   return (
     <div className="ss-content">
         <div className="wind-highlight-main">
-            {wind_speed} <span>Km/h</span>
+            {parseFloat(unit==="metric"?convertSpeed(wind_speed):wind_speed).toFixed(2)} <span>{unit==="metric"?"Km/h":"m/h"}</span>
         </div>
         <div className="wind-highlight-footer">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Googlemap.svg/640px-Googlemap.svg.png" className='ss-img' alt="pin point" />

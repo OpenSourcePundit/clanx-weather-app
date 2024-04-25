@@ -46,3 +46,6 @@ export const getSunTime = (dt) =>{
 
     return timeString;
 }
+export const convertSpeed = (speed) =>{
+    return (speed*3.6)
+}

@@ -38,7 +38,7 @@ export const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, initialState);
 
   const fetchWeather = async () => {
-    console.log("unit",state.unit)
+   
     try { 
       const { data: weatherData } = await axios.get(
         `https://api.openweathermap.org/data/3.0/onecall?lat=${state.lat}&lon=${state.lon}&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`

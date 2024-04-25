@@ -1,4 +1,3 @@
-
 import React from "react";
 import UVIndex from "../HighlightsContent/UVIndex";
 import WindStatus from "../HighlightsContent/WindStatus";

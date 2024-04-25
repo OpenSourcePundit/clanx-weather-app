@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { getSunTime } from '../../../utils/getWeekDay';
 import "./HighlightsContent.css"

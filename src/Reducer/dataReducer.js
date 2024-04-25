@@ -37,7 +37,7 @@ export const dataReducer = (state, {type, payload})=>{
             
         
         case "SET_LOCATION":
-            console.log("payload-",payload)
+         
             return {...state,lat:payload.lat,lon:payload.lon,location:payload.location}
         
             case "fetch_wishlist":

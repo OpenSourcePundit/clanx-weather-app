@@ -12,7 +12,6 @@ const HeaderRh = ({activeTab,setActiveTab}) => {
 
   return (
     <header className="header-rh">
-      {console.log("state",state)}
       <div className="tabs-left">
         <button className={`tab ${activeTab!=='week'?'active':''} `}  onClick={()=>setActiveTab("today")}  >Today</button>
         <button className={`tab ${activeTab==='week'?'active':''} `} onClick={()=>setActiveTab("week")}  >Week</button>
