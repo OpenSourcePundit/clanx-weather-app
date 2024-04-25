@@ -1,3 +1,4 @@
+
 import React from "react";
 import UVIndex from "../HighlightsContent/UVIndex";
 import WindStatus from "../HighlightsContent/WindStatus";
@@ -5,14 +6,15 @@ import SunriseSunset from "../HighlightsContent/SunriseSunset";
 import Humidity from "../HighlightsContent/Humidity";
 import Visibility from "../HighlightsContent/Visibility";
 import AQI from "../HighlightsContent/AQI";
+import "./HighlightsCard.css"
 
 const HighlightsCard = ({ head, current }) => {
   return (
-    <div className="week-card">
-      <div className="section ">
+    <div className="highlights-card">
+      <div className="hightlights-section ">
         <div className="head">{head}</div>
       </div>
-      <div className="section content">
+      <div className="highlights-section-content">
         {(() => {
           switch (head) {
             case "UV Index":

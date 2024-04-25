@@ -7,7 +7,7 @@ const Humidity = ({current}) => {
           <div className="highlight-main">
               
            <> {humidity}%</>
-           <div className="sidebar">o</div>
+           {/* <div className="sidebar">o</div> */}
   
           </div>
           <div className="highlight-footer">

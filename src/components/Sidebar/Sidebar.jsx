@@ -14,7 +14,7 @@ const Sidebar = () => {
           <img src={`${getIcon(current?.weather[0]?.icon)}`} alt="temp" className="temp-picture" />
         </div>
         <div className='sidebar-temp'>
-          {Math.trunc(current?.temp)}<span class="degree">&deg;C</span>  </div>
+          {Math.trunc(current?.temp)}<span class="degree">&deg;{unit==="metric"?'C':'F'}</span>  </div>
         <div className='sidebar-day'>{getWeekDayFull(current?.dt)} , {getSunTime(current.dt)}</div>
       </div>
       <div className='sidebar-down'>

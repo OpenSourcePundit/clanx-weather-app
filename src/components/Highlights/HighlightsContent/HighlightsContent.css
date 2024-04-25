@@ -46,13 +46,54 @@
     font-size: calc(var(--size) / 5);
     color: var(--primary);
   }
+
   
-  /* demo */
-  body {
-    margin: 0;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background: #f0f8ff;
-  }
-  
+
+/* sunrise-sunset content */
+
+.ss-content{
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  font-size: small;
+}
+
+.ss-img{
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem 0.7rem;
+}
+
+.sunrise, .sunset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.ss-time{
+  color: var(--app);
+  font-size: 0.6rem;
+}
+
+
+
+/* wind status */
+
+.ss-content .wind-highlight-main{
+  font-size: 2.2rem;
+  padding: 0rem;
+}
+
+.ss-content .wind-highlight-main span{
+  font-size: 0.8rem;
+}
+
+.wind-highlight-footer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

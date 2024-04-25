@@ -19,7 +19,7 @@ const UVIndex = ({current}) => {
       <div className="progress"></div>
     </div> */}
 
-<VerticalProgressBar progress={70} />
+{/* <VerticalProgressBar progress={70} /> */}
 
       </div>)
 }

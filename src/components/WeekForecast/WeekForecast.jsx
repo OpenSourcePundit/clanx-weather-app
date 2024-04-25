@@ -12,7 +12,7 @@ const WeekForecast = () => {
   const { daily,current } = useContext(DataContext);
 
   return (
-    <>
+    <div className="week-data">
     <div className="week-forecast">
       {daily?.map((day, index) =>
         index !== 0 ? (
@@ -35,7 +35,7 @@ const WeekForecast = () => {
     
 
     
-    </>
+    </div>
   );
 };
 

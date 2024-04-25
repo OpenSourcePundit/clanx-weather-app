@@ -1,9 +1,16 @@
+.week-data{
+}
 .week-forecast{
     display: flex;
     /* background-color: red; */
     justify-content: space-evenly;
     align-items: center;
 }
+
 .highlights-section{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 18px;
+    padding: 10px;
+    height: 17rem;
 }

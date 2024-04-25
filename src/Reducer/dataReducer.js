@@ -28,10 +28,13 @@ export const dataReducer = (state, {type, payload})=>{
                 },
                 daily: payload.daily.length > 0 ? payload.daily : state.daily,
             };      
-        case "Add_Product":
-            return{
-                ...state, products:[...state.products, ...payload]
-            };
+            case "TOGGLE_UNIT":
+                return {
+                    ...state,
+                    unit: state.unit === "metric" ? "imperial" : "metric"
+                };
+
+            
         
         case "fetch_cart":
             return {...state, cart:[...payload], cartLength: payload.length }

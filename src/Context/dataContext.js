@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
     locationimage:"https://images.unsplash.com/photo-1444723121867-7a241cacace9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tab:"Week",
     status:"idle",
-    unit:"C",
+    unit:"metric",
     lat: null,
     lon: null,
     timezone: "",
@@ -36,10 +36,11 @@ export const DataProvider = ({ children }) => {
   };
   const [state, dispatch] = useReducer(dataReducer, initialState);
 
-  const fetchWeather = async (unit='metric') => {
+  const fetchWeather = async () => {
+    console.log("unit",state.unit)
     try { 
       const { data: weatherData } = await axios.get(
-        `https://api.openweathermap.org/data/3.0/onecall?lat=28.70&lon=77.10&exclude=minutely,hourly,alerts&units=${unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`
+        `https://api.openweathermap.org/data/3.0/onecall?lat=28.70&lon=77.10&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`
       );
       
       dispatch({
@@ -59,7 +60,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
-  }, []);
+  }, [state.unit]);
 
   return (
     <DataContext.Provider
@@ -74,7 +75,7 @@ export const DataProvider = ({ children }) => {
         timezone_offset: state.timezone_offset,
         current: state.current,
         daily:state.daily,
-        dataDispatch: dispatch,
+        dispatch: dispatch,
 
       }}
     >

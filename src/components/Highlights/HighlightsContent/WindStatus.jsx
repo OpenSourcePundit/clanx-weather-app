@@ -1,17 +1,19 @@
+
 import React from 'react'
 import { degToDirection } from '../../../utils/getWeekDay'
 
 const WindStatus = ({current}) => {
     const {wind_speed,wind_deg} = current
   return (
-    <div className="content">
-        <div className="highlight-main">
-            {console.log("wind",wind_speed)}
-            {wind_speed}
-
+    <div className="ss-content">
+        <div className="wind-highlight-main">
+            {wind_speed} <span>Km/h</span>
         </div>
-        <div className="highlight-footer">
+        <div className="wind-highlight-footer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Googlemap.svg/640px-Googlemap.svg.png" className='ss-img' alt="pin point" />
+            <div className='ws-area'>
             {degToDirection(wind_deg)}
+            </div>
         </div>
 
     </div>
