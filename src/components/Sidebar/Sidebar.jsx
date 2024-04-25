@@ -5,7 +5,7 @@ import { getIcon, getSunTime, getWeekDayFull } from '../../utils/getWeekDay';
 
 const Sidebar = () => {
 
-  const {timezone,current,unit,locationimage,location} = useContext(DataContext)
+  const {current,unit,locationimage,location} = useContext(DataContext)
 
   return (
     <div className="sidebar">
