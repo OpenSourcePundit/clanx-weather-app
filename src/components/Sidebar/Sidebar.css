@@ -1,0 +1,48 @@
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.sidebar-up, .sidebar-down{
+  display: block;
+  margin: 0.5rem auto;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  /* border-bottom: 1px solid var(--font); */
+}
+
+.side-img{
+  text-align: center !important;
+}
+
+.temp-picture{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.sidebar-temp{
+  font-size: 4.5rem;
+}
+
+.sidebar-day, .sidebar-text{
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+.sidebar-down{
+  border-top: 0.5px solid var(--font);
+ 
+}
+
+.city-picture{
+  width: 15rem;
+  height: 5rem;
+  border-radius: 15px;
+  margin: 0.5rem;
+}

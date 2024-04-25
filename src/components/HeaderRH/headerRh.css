@@ -1,58 +1,67 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .tabs {
-    display: flex;
-    gap: 10px;
-    position: relative; /* Add relative positioning for the container */
-  }
-  
-  .tab {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .tab.active {
-    font-weight: bold;
-  }
-  
-  .active-tab-underline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%; /* Adjust to match the width of the active tab */
-    height: 2px;
-    background-color: black; /* Change color as needed */
-    transition: width 0.3s ease; /* Add transition effect */
-  }
-  
-  .temperature-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .temperature-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .temperature-btn.active {
-    font-weight: bold;
-  }
-  
-  .profile-icon {
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .profile-picture {
-    width: 40px;
-    height: 40px;
-  }
-  
+.header-rh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.tabs-left {
+  display: flex;
+}
+
+.tabs-right {
+  display: flex;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.tab.active {
+  font-weight: bold;
+  border-bottom: 1px solid var(--font);
+}
+
+.active-tab-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%; /* Adjust to match the width of the active tab */
+  height: 2px;
+  background-color: black; /* Change color as needed */
+  transition: width 0.3s ease; /* Add transition effect */
+}
+
+.temperature-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.temperature-btn.active {
+  font-weight: bold;
+  background-color: black;
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.profile-picture {
+  border-radius: 15px;
+  height: 40px;
+}
+
+
+
+
+/* responsiveness */
+
+@media screen and (max-width:722px){
+ 
+.active-tab-underline{
+display: none;
+}
+}

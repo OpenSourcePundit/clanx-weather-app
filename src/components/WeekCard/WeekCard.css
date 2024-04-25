@@ -1,51 +1,65 @@
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
+.week-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.week-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: .5rem;
+  margin: .5rem;
+  width: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  margin: 0.1rem;
+  text-align: center;
+}
+
+.weekday {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--font);
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.max-temp, .min-temp {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: var(--font);
+}
+
+
+
+
+/* responsiveness */
+
+@media screen and (max-width:1170px){
+  .week-card{
+    width: 4rem;
   }
-  
-  .card {
-    
-    background-color: white;
-    border-radius: 15px;
-    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    margin: 2px;
-    width: 100px;
+}
+
+@media screen and (max-width:1050px){
+  .week-card{
+    width: 3rem;
   }
-  
-  .section {
-    margin-bottom: 15px;
+}
+
+  @media screen and (max-width:917px){
+    .week-card{
+      width: 2rem;
+      height: 8rem;
+    }
   }
-  
-  .weekday {
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 2px;
-  }
-  
-  .icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 2px;
-  }
-  
-  .temperatures {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .max-temp {
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .min-temp {
-    font-size: 15px;
-    color: #666;
-  }
-  

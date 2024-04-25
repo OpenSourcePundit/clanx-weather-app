@@ -1,3 +1,9 @@
 .week-forecast{
     display: flex;
+    /* background-color: red; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+.highlights-section{
+    display: flex;
 }

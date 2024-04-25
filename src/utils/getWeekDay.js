@@ -5,8 +5,32 @@ export const getWeekDay = (dt) => {
     return weekdays[weekdayIndex];
   
 }
+export const getWeekDayFull = (dt) => {
+    const date = new Date(dt * 1000);
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const weekdayIndex = date.getDay();
+    return weekdays[weekdayIndex];
+  
+}
 
 export const getIcon = (icon) => {
     console.log("iconurl :",`https://openweathermap.org/img/wn/${icon}@2x.png`)
     return `https://openweathermap.org/img/wn/${icon}@2x.png`;
 }
+export const getTime = (dt) =>{
+    const date = new Date(dt * 1000);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return {
+        hours,
+        minutes,
+        seconds
+    };
+}
+
+export const degToDirection = (num) => {
+    const val = Math.floor((num / 22.5) + 0.5);
+    const arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    return arr[(val % 16)];
+  };

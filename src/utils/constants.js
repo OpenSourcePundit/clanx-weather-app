@@ -1,0 +1,1 @@
+export const HighlightsCardHead = ["UV Index","Wind Status","Sunrise & Sunset","Humidity","Visibility","Air Quality"]
