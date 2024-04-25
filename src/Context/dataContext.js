@@ -7,6 +7,7 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const initialState = {
+    tab:"Week",
     status:"idle",
     unit:"C",
     lat: null,
@@ -34,15 +35,15 @@ export const DataProvider = ({ children }) => {
   };
   const [state, dispatch] = useReducer(dataReducer, initialState);
 
-  const fetchWeather = async () => {
+  const fetchWeather = async (unit='metric') => {
     try { 
-    //   const { data: weatherData } = await axios.get(
-    //     "https://api.openweathermap.org/data/3.0/onecall?lat=28.70&lon=77.10&exclude=minutely,hourly,alerts&appid=b08bf90d3dc2d9c6358ce2636fd00398"
-    //   );
+      const { data: weatherData } = await axios.get(
+        `https://api.openweathermap.org/data/3.0/onecall?lat=28.70&lon=77.10&exclude=minutely,hourly,alerts&units=${unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`
+      );
       
       dispatch({
         type: "UPDATE_WEATHER_DATA",
-        payload: demo,
+        payload: weatherData,
       });
 
     } catch (err) {
@@ -57,6 +58,7 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider
       value={{ 
+        tab:state.tab,
         status:state.status,
         unit:state.unit,
         lat: state.lat,

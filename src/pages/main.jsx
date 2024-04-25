@@ -18,7 +18,8 @@ const Main = () => {
         current,
         daily,
         status,
-        unit
+        unit,
+        tab
       } = useContext(DataContext);
     
       const state = useContext(DataContext)
