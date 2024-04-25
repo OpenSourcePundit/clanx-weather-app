@@ -27,13 +27,6 @@ const Main = () => {
     
       const state = useContext(DataContext)
 
-    //   if (status === 'loading') {
-    //     return <div>Loading...</div>;
-    // }
-
-    // if (status === 'error') {
-    //     return <div>Error: {error}</div>;
-    // }
   
   return (
         <div className="wrapper-main">
