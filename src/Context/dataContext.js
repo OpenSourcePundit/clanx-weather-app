@@ -7,6 +7,7 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const initialState = {
+    locationimage:"https://images.unsplash.com/photo-1444723121867-7a241cacace9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tab:"Week",
     status:"idle",
     unit:"C",
@@ -51,6 +52,11 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+
+
+
+
+
   useEffect(() => {
     fetchWeather();
   }, []);
@@ -58,6 +64,7 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider
       value={{ 
+        locationimage:state.locationimage,
         tab:state.tab,
         status:state.status,
         unit:state.unit,

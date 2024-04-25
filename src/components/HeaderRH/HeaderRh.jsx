@@ -1,11 +1,12 @@
 import React from 'react'
 import "./HeaderRh.css"
-const HeaderRh = () => {
+const HeaderRh = ({activeTab,setActiveTab}) => {
+  console.log("tabs",activeTab,setActiveTab)
   return (
     <header className="header-rh">
       <div className="tabs-left">
-        <button className="tab active">Today</button>
-        <button className="tab">Week</button>
+        <button className={`tab ${activeTab!=='week'?'active':''} `}  onClick={()=>setActiveTab("today")}  >Today</button>
+        <button className={`tab ${activeTab==='week'?'active':''} `} onClick={()=>setActiveTab("week")}  >Week</button>
         <div className="active-tab-underline"></div>
       </div>
       <div className='tabs-right'>

@@ -39,10 +39,28 @@
   border-top: 0.5px solid var(--font);
  
 }
-
+.degree {
+  position: relative;
+  top: -2rem;
+  font-size: 2rem;
+}
 .city-picture{
-  width: 15rem;
+  width: 17rem;
   height: 5rem;
   border-radius: 15px;
   margin: 0.5rem;
+}
+.sidebar-city-img {
+  position: relative; 
+}
+.city-text {
+  position: absolute;
+  bottom:0;
+  top:30%;
+  left: 0;
+  right: 0;  
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: center;
 }

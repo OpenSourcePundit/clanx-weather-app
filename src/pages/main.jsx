@@ -1,5 +1,5 @@
 
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import "./main.css"
 import { useContext } from 'react'
 import { DataContext } from '../Context/dataContext'
@@ -7,8 +7,11 @@ import WeekForecast from '../components/WeekForecast/WeekForecast'
 import HeaderRh from '../components/HeaderRH/HeaderRh'
 import SearchBar from '../components/SearchBar/SearchBar'
 import Sidebar from '../components/Sidebar/Sidebar'
+import DayForecast from '../components/DayForecast/DayForecast'
 
 const Main = () => {
+
+    const [activeTab,setActiveTab] = useState("week")
 
     const {
         lat,
@@ -43,8 +46,8 @@ const Main = () => {
                 </div>
             </div>
             <div className="section-rh-main">              
-                <HeaderRh/>
-                <WeekForecast/>
+                <HeaderRh activeTab={activeTab} setActiveTab={setActiveTab} />
+                {activeTab==="week"?<WeekForecast/>:<DayForecast/>}
             </div>
         </div>
   )
