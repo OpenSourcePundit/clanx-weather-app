@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { convertSpeed, degToDirection } from '../../../utils/getWeekDay'
+import { convertSpeed, degToDirection } from '../../../utils/util'
 import { DataContext } from '../../../Context/dataContext'
 
 

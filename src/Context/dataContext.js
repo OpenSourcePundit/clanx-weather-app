@@ -1,7 +1,6 @@
 import axios from "axios";
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useCallback, useEffect, useReducer } from "react";
 import { dataReducer } from "../Reducer/dataReducer";
-import { demo } from "../demodata";
 
 export const DataContext = createContext();
 
@@ -37,11 +36,11 @@ export const DataProvider = ({ children }) => {
   };
   const [state, dispatch] = useReducer(dataReducer, initialState);
 
-  const fetchWeather = async () => {
+  const fetchWeather = useCallback(async () => {
    
     try { 
       const { data: weatherData } = await axios.get(
-        `https://api.openweathermap.org/data/3.0/onecall?lat=${state.lat}&lon=${state.lon}&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`
+        `https://api.openweathermap.org/data/3.0/onecall?lat=${state.lat}&lon=${state.lon}&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=${process.env.REACT_APP_API_KEY}`
       );
       
       dispatch({
@@ -52,7 +51,7 @@ export const DataProvider = ({ children }) => {
     } catch (err) {
       console.log(err);
     }
-  };
+  },[state.unit,state.lat,state.lon]);
 
 
 
@@ -61,7 +60,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
-  }, [state.unit,state.lat,state.lon]);
+  }, [state.unit,state.lat,state.lon,fetchWeather]);
 
   return (
     <DataContext.Provider

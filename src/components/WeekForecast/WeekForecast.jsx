@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../../Context/dataContext";
 import WeekCard from "../WeekCard/WeekCard";
-import { getWeekDay, getIcon } from "../../utils/getWeekDay";
+import { getWeekDay, getIcon } from "../../utils/util";
 import "./WeekForecast.css";
 import { HighlightsCardHead } from "../../utils/constants";
 import HighlightsCard from "../Highlights/HighlightsCard/HighlightsCard";

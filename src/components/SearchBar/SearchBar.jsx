@@ -18,7 +18,7 @@ const SearchBar = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://api.openweathermap.org/geo/1.0/direct?q=${term}&limit=5&appid=b08bf90d3dc2d9c6358ce2636fd00398`
+          `http://api.openweathermap.org/geo/1.0/direct?q=${term}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
         );
         const data = await response.json();
       
@@ -29,7 +29,7 @@ const SearchBar = () => {
         setLoading(false);
       }
     }, 500),
-    []
+    [debounce, setSearchResults]
   );
 
   const handleSearchChange = (event) => {
@@ -38,7 +38,7 @@ const SearchBar = () => {
     debouncedSearch(term);
   };
 
-  const {dispatch,lat,lon} = useContext(DataContext)
+  const {dispatch} = useContext(DataContext)
 
   return (
     <div className="search-bar">

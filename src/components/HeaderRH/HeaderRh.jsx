@@ -3,7 +3,7 @@ import "./HeaderRh.css"
 import { DataContext } from '../../Context/dataContext'
 const HeaderRh = ({activeTab,setActiveTab}) => {
 
-  const state = useContext(DataContext)
+
   
   const {unit,dispatch} = useContext(DataContext)
   const toggleUnit = () =>{
