@@ -4,13 +4,14 @@
     width: 75%;
     margin: 4rem auto;
     height: 34rem;
+    padding: 0.5rem;
 }
 
 .section-lh-main{
 background-color:#FFFFFE ;
 display: block;
 margin: auto;
-height: 100%;
+height: 102%;
 width: 25%;
 border-radius: 25px 0px 0px 25px ;
 justify-content: center;
@@ -22,7 +23,7 @@ background-color: var(--background);
 display: flex;
 flex-direction:column;
 padding: 1rem;
-height: 100%;
+height: 102%;
 width: 75%;
 border-radius: 0px 25px 25px 0px ;
 }

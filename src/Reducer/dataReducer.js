@@ -36,8 +36,9 @@ export const dataReducer = (state, {type, payload})=>{
 
             
         
-        case "fetch_cart":
-            return {...state, cart:[...payload], cartLength: payload.length }
+        case "SET_LOCATION":
+         
+            return {...state,lat:payload.lat,lon:payload.lon,location:payload.location}
         
             case "fetch_wishlist":
             return {...state, wishlist:[...payload], wishlistLength: payload.length }

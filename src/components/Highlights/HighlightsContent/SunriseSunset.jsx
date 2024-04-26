@@ -1,6 +1,5 @@
-
 import React from 'react'
-import { getSunTime } from '../../../utils/getWeekDay';
+import { getSunTime } from '../../../utils/util';
 import "./HighlightsContent.css"
 
 const SunriseSunset = ({current}) => {

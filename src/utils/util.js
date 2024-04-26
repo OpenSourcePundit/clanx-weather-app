@@ -13,8 +13,7 @@ export const getWeekDayFull = (dt) => {
   
 }
 
-export const getIcon = (icon) => {
-    console.log("iconurl :",`https://openweathermap.org/img/wn/${icon}@2x.png`)
+export const getIcon = (icon) => {    
     return `https://openweathermap.org/img/wn/${icon}@2x.png`;
 }
 export const getTime = (dt) =>{
@@ -46,4 +45,7 @@ export const getSunTime = (dt) =>{
     const timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${amOrPm}`;
 
     return timeString;
+}
+export const convertSpeed = (speed) =>{
+    return (speed*3.6)
 }

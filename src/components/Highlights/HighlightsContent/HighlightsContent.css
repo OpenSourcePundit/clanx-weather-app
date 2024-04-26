@@ -1,53 +1,3 @@
-@keyframes progress {
-    0% { --percentage: 0; }
-    100% { --percentage: var(--value); }
-  }
-  
-  @property --percentage {
-    syntax: '<number>';
-    inherits: true;
-    initial-value: 0;
-  }
-  
-  [role="progressbar"] {
-    --percentage: var(--value);
-    --primary: #369;
-    --secondary: #adf;
-    --size: 300px;
-    animation: progress 2s 0.5s forwards;
-    width: var(--size);
-    aspect-ratio: 2 / 1;
-    border-radius: 50% / 100% 100% 0 0;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  
-  [role="progressbar"]::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: conic-gradient(from 0.75turn at 50% 100%, var(--primary) calc(var(--percentage) * 1% / 2), var(--secondary) calc(var(--percentage) * 1% / 2 + 0.1%));
-    mask: radial-gradient(at 50% 100%, white 55%, transparent 55.5%);
-    mask-mode: alpha;
-    -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 55.5%);
-    -webkit-mask-mode: alpha;
-  }
-  
-  [role="progressbar"]::after {
-    counter-reset: percentage var(--value);
-    content: counter(percentage) '%';
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: calc(var(--size) / 5);
-    color: var(--primary);
-  }
-
-  
 
 /* sunrise-sunset content */
 
@@ -56,7 +6,7 @@
   margin: auto;
   text-align: center;
   width: 100%;
-  padding: 0.5rem 0rem;
+  /* padding: 0.5rem 0rem; */
   font-size: small;
 }
 
@@ -96,4 +46,137 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+
+
+/* humidity  */
+.humidity-content{
+  display: flex;
+  font-size: small;
+  justify-content: center;
+  align-items: center;
+}
+
+.humidity-highlight-main{
+  font-size: 2.2rem;
+}
+
+.aqi-highlight-main{
+  font-size: 2rem;
+}
+
+.humidity-highlight-footer{
+  font-size: 0.8rem;
+}
+
+.slidecontainer {
+  width: 60%; /* Adjusted width */
+  height: 60%;
+  transform: rotateZ(-90deg);
+}
+
+
+#slider{
+  overflow: hidden;
+  width: 50%;
+  height: 10%;
+}
+
+input[type="range"] {
+  /* For Firefox */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Set the width and height of the track */
+  width: 100%;
+  height: 10px;
+  /* Set the background color of the track */
+  background-color: #ddd;
+  /* Set border-radius to round the corners */
+  border-radius: 5px;
+}
+
+/* Change the color of the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  /* For Chrome, Safari, and Opera */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Set the width and height of the thumb */
+  width: 20px;
+  height: 20px;
+  /* Set the background color of the thumb */
+ 
+  background-color: #5a39b5;
+  /* Set border-radius to round the thumb */
+  border-radius: 50%;
+  /* Set box-shadow for a more prominent thumb */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #5a39b5;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px; /* Adjusted width */
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px; /* Adjusted width */
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+.uv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content:flex-start; */
+}
+.uv-index{
+  position: absolute;
+  top: 100;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+ProgressBar{
+  width: 1rem;  
+}
+
+.RCP svg{
+  height: 150px;
 }

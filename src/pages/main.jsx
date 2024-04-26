@@ -1,8 +1,6 @@
 
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 import "./main.css"
-import { useContext } from 'react'
-import { DataContext } from '../Context/dataContext'
 import WeekForecast from '../components/WeekForecast/WeekForecast'
 import HeaderRh from '../components/HeaderRH/HeaderRh'
 import SearchBar from '../components/SearchBar/SearchBar'
@@ -12,20 +10,6 @@ import DayForecast from '../components/DayForecast/DayForecast'
 const Main = () => {
 
     const [activeTab,setActiveTab] = useState("week")
-
-    const {
-        lat,
-        lon,
-        timezone,
-        timezone_offset,
-        current,
-        daily,
-        status,
-        unit,
-        tab
-      } = useContext(DataContext);
-    
-      const state = useContext(DataContext)
 
   
   return (

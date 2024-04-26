@@ -3,7 +3,7 @@ import "./HeaderRh.css"
 import { DataContext } from '../../Context/dataContext'
 const HeaderRh = ({activeTab,setActiveTab}) => {
 
-  const state = useContext(DataContext)
+
   
   const {unit,dispatch} = useContext(DataContext)
   const toggleUnit = () =>{
@@ -12,11 +12,9 @@ const HeaderRh = ({activeTab,setActiveTab}) => {
 
   return (
     <header className="header-rh">
-      {console.log("state",state)}
       <div className="tabs-left">
         <button className={`tab ${activeTab!=='week'?'active':''} `}  onClick={()=>setActiveTab("today")}  >Today</button>
         <button className={`tab ${activeTab==='week'?'active':''} `} onClick={()=>setActiveTab("week")}  >Week</button>
-        <div className="active-tab-underline"></div>
       </div>
       <div className='tabs-right'>
         <div className="tab temperature-buttons">

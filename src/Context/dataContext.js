@@ -1,18 +1,18 @@
 import axios from "axios";
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useCallback, useEffect, useReducer } from "react";
 import { dataReducer } from "../Reducer/dataReducer";
-import { demo } from "../demodata";
 
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const initialState = {
     locationimage:"https://images.unsplash.com/photo-1444723121867-7a241cacace9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    location:"Kolkata,WestBengal,India",
     tab:"Week",
     status:"idle",
     unit:"metric",
-    lat: null,
-    lon: null,
+    lat: 28.70,
+    lon: 77.10,
     timezone: "",
     timezone_offset: null,
     current: {
@@ -22,12 +22,12 @@ export const DataProvider = ({ children }) => {
       temp: null,
       feels_like: null,
       pressure: null,
-      humidity: null,
+      humidity: 0,
       dew_point: null,
-      uvi: null,
+      uvi: 0,
       clouds: null,
-      visibility: null,
-      wind_speed: null,
+      visibility: 0,
+      wind_speed: 0,
       wind_deg: null,
       wind_gust: null,
       weather: [],
@@ -36,11 +36,11 @@ export const DataProvider = ({ children }) => {
   };
   const [state, dispatch] = useReducer(dataReducer, initialState);
 
-  const fetchWeather = async () => {
-    console.log("unit",state.unit)
+  const fetchWeather = useCallback(async () => {
+   
     try { 
       const { data: weatherData } = await axios.get(
-        `https://api.openweathermap.org/data/3.0/onecall?lat=28.70&lon=77.10&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=b08bf90d3dc2d9c6358ce2636fd00398`
+        `https://api.openweathermap.org/data/3.0/onecall?lat=${state.lat}&lon=${state.lon}&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=${process.env.REACT_APP_API_KEY}`
       );
       
       dispatch({
@@ -51,7 +51,7 @@ export const DataProvider = ({ children }) => {
     } catch (err) {
       console.log(err);
     }
-  };
+  },[state.unit,state.lat,state.lon]);
 
 
 
@@ -60,12 +60,13 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     fetchWeather();
-  }, [state.unit]);
+  }, [state.unit,state.lat,state.lon,fetchWeather]);
 
   return (
     <DataContext.Provider
       value={{ 
         locationimage:state.locationimage,
+        location:state.location,
         tab:state.tab,
         status:state.status,
         unit:state.unit,

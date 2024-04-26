@@ -1,10 +1,7 @@
 import React from 'react';
 import './WeekCard.css';
-import { useContext } from 'react';
-import { DataContext } from '../../Context/dataContext';
 
 const WeekCard = ({ weekday, iconSrc, maxTemp, minTemp }) => {
-const {unit} = useContext(DataContext);
 
     return (
         // <div className="week-card-container">
