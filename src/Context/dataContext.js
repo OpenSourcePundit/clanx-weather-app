@@ -38,7 +38,11 @@ export const DataProvider = ({ children }) => {
 
   const fetchWeather = useCallback(async () => {
    
-    try { 
+    try {  
+      dispatch({
+      type: "SET_LOADING",
+    });
+
       const { data: weatherData } = await axios.get(
         `https://api.openweathermap.org/data/3.0/onecall?lat=${state.lat}&lon=${state.lon}&exclude=minutely,hourly,alerts&units=${state?.unit}&appid=${process.env.REACT_APP_API_KEY}`
       );

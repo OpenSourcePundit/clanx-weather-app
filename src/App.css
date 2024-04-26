@@ -5,6 +5,7 @@
   margin: 0;
 }
 
+
 :root {
   --primary: #6e9d58;
   --secondary: #dde9d8;
@@ -20,11 +21,17 @@
   --app: rgb(205, 203, 203);
 }
 
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 body {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   background-color: var(--app);
 }
-
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

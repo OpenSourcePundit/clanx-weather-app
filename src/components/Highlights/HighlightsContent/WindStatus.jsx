@@ -9,7 +9,7 @@ const WindStatus = ({current}) => {
   return (
     <div className="ss-content">
         <div className="wind-highlight-main">
-            {parseFloat(unit==="metric"?convertSpeed(wind_speed):wind_speed).toFixed(2)} <span>{unit==="metric"?"Km/h":"m/h"}</span>
+            {parseFloat(unit==="metric"?convertSpeed(wind_speed):wind_speed).toFixed(2)} <span>{unit==="metric"?"Km/h":"miles/h"}</span>
         </div>
         <div className="wind-highlight-footer">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Googlemap.svg/640px-Googlemap.svg.png" className='ss-img' alt="pin point" />
