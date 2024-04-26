@@ -11,7 +11,7 @@ const AQI = () => {
       </div>
 </div>
 <div className='slidecontainer'>
-   <input id='slider' type="range" min="1" max="100" value="80"></input>
+   <input id='slider' type="range" min="1" max="100" value="80" readOnly></input>
 </div>
 </div>
 

@@ -15,7 +15,7 @@ const UVIndex = ({current}) => {
     steps={15}
     cut={180}
     rotate={180}
-    strokeWidth={28}
+    strokeWidth={18}
     strokeColor="#ffce54"
     strokeLinecap="butt"
     trackStrokeWidth={10}

@@ -12,7 +12,7 @@ const Humidity = ({current}) => {
                 </div>
           </div>
           <div className='slidecontainer'>
-             <input id='slider' type="range" min="1" max="100" value={humidity}></input>
+             <input id='slider' type="range" min="1" max="100" value={humidity} readOnly></input>
           </div>
        </div>
   

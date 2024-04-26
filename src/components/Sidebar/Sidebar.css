@@ -31,8 +31,9 @@
 }
 
 .sidebar-day, .sidebar-text{
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0.5rem;
+  font-weight:bolder;
 }
 
 .sidebar-down{
@@ -53,6 +54,9 @@
   top: -2rem;
   font-size: 2rem;
 }
+.sidebar-weather-up{
+  display: flex;
+}
 
 .sidebar-city-img {
   position: relative; 
@@ -60,10 +64,11 @@
 .city-text {
   position: absolute;
   bottom:0;
-  top:30%;
+  top:40%;
   left: 0;
   right: 0;  
   color: white;
+  font-weight: bolder;
   padding: 0.5rem;
   text-align: center;
   justify-content: center;

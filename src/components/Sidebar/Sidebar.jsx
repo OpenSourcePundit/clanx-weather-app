@@ -19,11 +19,11 @@ const Sidebar = () => {
       </div>
       <div className='sidebar-down'>
         <div className='sidebar-text'>
-          {current.weather.map((weather,index)=><div key={index} className='sidebar-weather-up'>{weather?.description}</div>)}
+          {current.weather.map((weather,index)=><div key={index} className='sidebar-weather-up'> <img src={`${getIcon(weather.icon)}`} alt="" width={25} height={25} /> {weather?.description}</div>)}
         </div>
         <div className='sidebar-city-img'>
           <img src={`${locationimage}`} alt="City" className="city-picture" />
-          <div className="city-text">{location}</div> {/* Text to be added */}
+          <div className="city-text">{location}</div>
         </div>
       </div>
     </div>

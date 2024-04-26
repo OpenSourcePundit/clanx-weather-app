@@ -16,20 +16,20 @@ const WeekForecast = () => {
     <div className="week-forecast">
       {daily?.map((day, index) =>
         index !== 0 ? (
-          <WeekCard key={index}
+          <WeekCard key={day.dt}
             weekday={getWeekDay(day.dt)}
             iconSrc={getIcon(day.weather[0].icon)}
             maxTemp={day.temp.max}
             minTemp={day.temp.min}
           />
         ) : (
-          <></>
+          <div key={day.dt}></div>
         )
       )}
     </div>
-    <h6>Today's Highlights</h6>
+    <h3 className="highlights-head">Today's Highlights</h3>
     <div className="highlights-section">
-      {HighlightsCardHead.map((head)=><HighlightsCard key={head} head={head} current={current} />)}
+      {HighlightsCardHead.map((head,index)=><HighlightsCard key={head} head={head} current={current} />)}
     
     </div>
     
