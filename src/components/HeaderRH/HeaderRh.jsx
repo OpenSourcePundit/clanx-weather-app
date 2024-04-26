@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import "./HeaderRh.css"
+
+import "../HeaderRh/HeaderRh.css"
 import { DataContext } from '../../Context/dataContext'
 const HeaderRh = ({activeTab,setActiveTab}) => {
 
