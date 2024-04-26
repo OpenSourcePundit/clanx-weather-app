@@ -51,7 +51,7 @@ const SearchBar = () => {
       <button className="search-btn">
         <FaSearch />
       </button>
-      {loading && <div>Loading...</div>}
+      {loading && <div></div>}
       {searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((result,index) => (
