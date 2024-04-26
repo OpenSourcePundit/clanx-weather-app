@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+![image](https://github.com/OpenSourcePundit/clanx-weather-app/assets/112277097/190f73d0-bb24-4139-9610-f29c7aac651a)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
