@@ -1,6 +1,6 @@
 
 import React, { useState, useCallback, useContext } from 'react';
-import './SearchBar.css';
+import './SearchBox.css';
 import { FaSearch } from 'react-icons/fa';
 import { DataContext } from '../../Context/dataContext';
 
