@@ -2,7 +2,7 @@
 import React,{ useState} from 'react'
 import "./main.css"
 import WeekForecast from '../components/WeekForecast/WeekForecast'
-import HeaderRh from '../components/HeaderRH/HeaderRh'
+import HeaderRh from '../components/HeaderRh/HeaderRh'
 import SearchBar from '../components/SearchBar/SearchBar'
 import Sidebar from '../components/Sidebar/Sidebar'
 import DayForecast from '../components/DayForecast/DayForecast'
