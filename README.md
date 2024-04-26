@@ -1,10 +1,41 @@
-# Getting Started with Create React App
+
+# Weather APP
 
 ![image](https://github.com/OpenSourcePundit/clanx-weather-app/assets/112277097/190f73d0-bb24-4139-9610-f29c7aac651a)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project has a Visually Appealing Weather Dashboard, including weather forecast of upto 7 days.
+The units can be used as METRIC as well as IMPERIAL.
+## API used
+>API-  [OpenWeatherMap API](https://openweathermap.org/api)
+
+
+
+## Highlights
+Highlights include:\
+1.UV Index\
+2.Wind Status\
+3.Sunrise time and Sunset time\
+4.Humidity\
+5.Visibility\
+6.AQI(not provided by API)\
+
+## Search Location
+Search allows you to search the location and gives 5 relevant options to select from.
+### Once selected after loading completes the Location weather data is displayed inside the dashboad.
+Search module uses React debounce and callback to achieve good response along with preventing over burdening of API.
+>API-  [OpenWeatherMap's Geocoding API](https://openweathermap.org/api/geocoding-api)
+
+
+
+
+
+
+
+---
+---
+
+### Available Scripts
 
 In the project directory, you can run:
 
