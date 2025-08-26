@@ -1,4 +1,6 @@
 .week-data{
+    height: max-content;
+    max-height: max-content;
 }
 .week-forecast{
     display: flex;
@@ -17,3 +19,8 @@
     padding: 10px;
     height: 17rem;
 }
+ @media screen and (max-width:580px){
+    .highlights-section{
+       grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+  }
