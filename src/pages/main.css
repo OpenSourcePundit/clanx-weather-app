@@ -35,7 +35,9 @@ border-radius: 0px 25px 25px 0px ;
 @media screen and (max-width:722px){
     .wrapper-main{
        display: block;
+       width: 95%;
     }
+    
 
 
     .section-lh-main{
@@ -68,7 +70,17 @@ border-radius: 0px 25px 25px 0px ;
         .sidebar-city-img{
             width: 100%;
         }
-        .border-down{
-
+        .tab.profile-icon{
+            display: none;
         }
   }
+  @media screen and (max-width:650px){
+    .highlights-section{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .highlights-card{
+        font-size: .8rem;
+        height:8rem;
+    }
+  }
+   
