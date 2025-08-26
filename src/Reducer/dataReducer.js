@@ -4,7 +4,7 @@ export const dataReducer = (state, { type, payload }) => {
         case "UPDATE_WEATHER_DATA":
             return {
                 ...state,
-                status:"success",
+                status: "success",
                 lat: payload.lat !== null ? payload.lat : state.lat,
                 lon: payload.lon !== null ? payload.lon : state.lon,
                 timezone: payload.timezone !== "" ? payload.timezone : state.timezone,
@@ -46,6 +46,8 @@ export const dataReducer = (state, { type, payload }) => {
 
         case "SET_LOADING":
             return { ...state, status: "loading" }
+        case "SET_IDLE":
+            return { ...state, status: "idle" }
 
 
         default:

@@ -5,6 +5,7 @@
     /* background-color: red; */
     justify-content: space-evenly;
     align-items: center;
+    overflow-x: scroll;
 }
 .highlights-head{
     padding: .5rem;

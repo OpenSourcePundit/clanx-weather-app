@@ -54,6 +54,11 @@ export const DataProvider = ({ children }) => {
 
     } catch (err) {
       console.log(err);
+    } finally {
+        dispatch({
+        type: "SET_IDLE"
+      });
+      
     }
   },[state.unit,state.lat,state.lon]);
 
